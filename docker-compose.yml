@@ -36,8 +36,11 @@ x-shared:
       ZAMMAD_SESSION_JOBS:
       ZAMMAD_PROCESS_SCHEDULED:
       ZAMMAD_PROCESS_DELAYED_JOBS_WORKERS:
-    image: ${IMAGE_REPO:-ghcr.io/zammad/zammad}:${VERSION:-6.3.1-185}
+    # image: ${IMAGE_REPO:-ghcr.io/zammad/zammad}:${VERSION:-6.3.1-185}
     restart: ${RESTART:-always}
+    build:
+      dockerfile: Dockerfile
+      context: ./zammad
     volumes:
       - zammad-storage:/opt/zammad/storage
     depends_on:
