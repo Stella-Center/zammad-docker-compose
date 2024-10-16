@@ -1,0 +1,3 @@
+[submodule "zammad"]
+	path = zammad
+	url = https://github.com/Stella-Center/zammad
