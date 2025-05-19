@@ -36,6 +36,8 @@ x-shared:
       ZAMMAD_SESSION_JOBS:
       ZAMMAD_PROCESS_SCHEDULED:
       ZAMMAD_PROCESS_DELAYED_JOBS_WORKERS:
+      S3_URL: ${S3_URL}
+      AWS_REGION: ${AWS_REGION}
     # image: ${IMAGE_REPO:-ghcr.io/zammad/zammad}:${VERSION:-6.3.1-185}
     restart: ${RESTART:-always}
     build:
