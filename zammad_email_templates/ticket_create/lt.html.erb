@@ -1,24 +1,16 @@
-Nauja triktis (#{ticket.title})
+New ticket (#{ticket.title})
 
-<div>Sveiki #{recipient.firstname},</div>
+<div>Hi #{recipient.firstname},</div>
 <br>
-<div>Nauja triktis (#{ticket.title}) buvo sukurta <b>#{current_user.longname}</b>.</div>
+<div>A new ticket has been created</div>
 <br>
 <div>
-Grupė: #{ticket.group.name}<br>
-Savininkas: #{ticket.owner.fullname}<br>
-Būklė: #{t(ticket.state.name)}<br>
+Group: #{ticket.group.name}<br>
+Owner: #{ticket.owner.fullname}<br>
+State: #{t(ticket.state.name)}<br>
 </div>
 <br>
-<% if @objects[:article] %>
-  <div>
-  Informacija:
-  <blockquote type="cite">
-  #{article.body_as_html}
-  </blockquote>
-  </div>
-<% end %>
 <br>
 <div>
-  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">Peržiūrėti #{config.product_name}</a>
+  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}" target="zammad_app">View this in #{config.product_name}</a>
 </div>
