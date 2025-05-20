@@ -1,14 +1,14 @@
-Updated ticket (#{ticket.title})
+Uppdaterat ärende (#{ticket.title})
 
-<div>Hi #{recipient.firstname},</div>
+<div>Hej #{recipient.firstname},</div>
 <br>
 <div>
-Ticket Testt (#{ticket.title}) has been updated by "<b>#{current_user.longname}</b>".
+Ärende (#{ticket.title}) har uppdatrats av "<b>#{current_user.longname}</b>".
 </div>
 <br>
 <% if @objects[:changes].present? %>
   <div>
-  Changes:<br>
+  Ändringar:<br>
   <% @objects[:changes].each do |key, value| %>
     <%= t key %>: <%= h value[0] %> -&gt; <%= h value[1] %><br>
   <% end %>
@@ -25,5 +25,5 @@ Ticket Testt (#{ticket.title}) has been updated by "<b>#{current_user.longname}<
 <% end %>
 <br>
 <div>
-  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<% if @objects[:article] %>/#{article.id}<% end %>" target="zammad_app">View this in #{config.product_name}</a>
+  <a href="#{config.http_type}://#{config.fqdn}/#ticket/zoom/#{ticket.id}<% if @objects[:article] %>/#{article.id}<% end %>" target="zammad_app">Visa i #{config.product_name}</a>
 </div>
