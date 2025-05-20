@@ -45,7 +45,7 @@ x-shared:
       context: ./zammad
     volumes:
       - zammad-storage:/opt/zammad/storage
-      # - ./zammad_email_templates:/opt/zammad/app/views/mailer
+      - ./zammad_email_templates/en.html.erb:/opt/zammad/app/views/mailer/en.html/erb
     depends_on:
       - zammad-memcached
       - zammad-postgresql
